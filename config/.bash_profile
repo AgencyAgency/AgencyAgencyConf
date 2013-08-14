@@ -17,6 +17,11 @@ shopt -s histverify
 shopt -s histreedit
 shopt -s cmdhist
 
+# BASH Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 # Grep
 # Warning:
 #   Don't set this to 'always', as this will screw up Git submodule updates.
