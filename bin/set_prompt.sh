@@ -1,4 +1,4 @@
-. ${AGENCY_BIN}/.git-completion.sh
+. ${AGENCY_BIN}/dot.git-completion.sh
 if [ "${TERM}" = "dumb" ]; then
   # Set emacs term prompt:
   PS1="\n\
