@@ -1,0 +1,53 @@
+[user]
+	name = Kyle Oba
+	email = koba@mudphone.com
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	sm = submodule
+	smu = submodule update
+	smi = submodule init
+	smf = submodule foreach
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgpo = log --pretty=oneline
+[apply]
+	whitespace = nowarn
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+	grep = auto
+[help]
+	autocorrect = 1
+[push]
+	default = current
+[core]
+	editor = /usr/local/bin/emacs -nw --no-init-file --no-site-file --load ~/.emacs.minimal
+	excludesfile = /Users/koba/.gitignore
+	quotepath = false
+#[merge]
+#  tool = extMerge
+#[mergetool "extMerge"]
+#  cmd = extMerge $BASE $LOCAL $REMOTE $MERGED
+#  trustExitCode = false
+#[diff]
+#  external = extDiff
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "development"]
+	merge = refs/heads/development
+	remote = origin
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[pull]
+	rebase = true
