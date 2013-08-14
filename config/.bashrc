@@ -9,8 +9,7 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 # Set the prompt.
 . ${AGENCY_BIN}/set_prompt.sh
 
-# Misc
-. ${AGENCY_BIN}/.rake_cap_bash_autocomplete.sh
+# Webby stuff.
 function serve {
   port="${1:-3000}"
   ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start"
