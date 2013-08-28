@@ -29,3 +29,5 @@ alias ghub='/usr/local/bin/github'
 function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { ps axu | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -40,3 +40,5 @@ export GREP_OPTIONS='--color=auto'
 [[ -s ${HOME}/.bashrc ]] && source ${HOME}/.bashrc
 # Symink local profile from AGENCY_CONFIG/.profile.local.* to .profile.local
 [[ -s ${AGENCY_CONFIG}/.profile.local ]] && source ${AGENCY_CONFIG}/.profile.local
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
